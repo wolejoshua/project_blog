@@ -1,0 +1,233 @@
+
+@import url("reset.css");
+
+/* Grid Areas */
+
+header{
+    grid-area: header; 
+    background-color: yellow;
+}
+nav{
+    grid-area:nav; 
+    background-color: bisque;
+
+}
+.content{
+    grid-area: con;
+    /* background-color: aqua; */
+    min-height: 500px;
+    min-width: 50px;
+    font-size: 50px;
+    padding: 10px;
+  
+}
+footer{
+    grid-area: footer;
+    background-color: bisque;
+
+}
+.sidebar{
+    grid-area: sidebar;
+    /* background-color: brown; */
+    min-height: 500px;
+    min-width: 50px;
+    font-style: italic;
+    padding: 20px;
+
+}
+
+p{
+    font-size: 20px;
+}
+
+
+      @media(max-width: 950px){
+        
+     .container {
+            width: 100%;
+            display: grid;
+            height: auto;
+            
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto 1fr auto;
+            grid-template-areas: 
+            "header"
+            "nav"
+            "con"
+            "sidebar"
+            "footer";
+    }
+    
+    header,nav,.content,footer, .sidebar{
+        width: 100%;
+        border: solid black 1px;
+    }
+    
+    a.button{
+        display: block;
+        max-width: 100px;
+        margin: 0 auto;
+    }
+}
+
+.container {
+    background-image: url(../imgs/hot.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1200px;    
+    display:grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: "header header header header header header header header header header"
+    "nav nav nav nav nav nav nav nav nav nav"
+    " con con con con con sidebar sidebar sidebar sidebar sidebar"
+    "footer footer footer footer footer footer footer footer footer footer";
+    gap: 5px;
+
+}
+
+/* Header */
+
+
+h1{
+    font-size: 60px;
+    text-align: center;
+}
+
+/* navigation */
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    
+}
+
+
+li{
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 20px;
+
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+    cursor: click;
+}
+
+
+/* Left-box Content */
+h2{
+    font-size: 16px;
+    margin: 10px 0;
+
+}
+
+h3{
+ font-size: 14px;
+ margin: 10px 0;
+}
+
+p{
+    font-size: 12px;
+    margin-top: 10px 0;
+}
+    
+/* Right-Sidebar */
+
+.sidebar{
+    padding: 5px 10px;
+    padding: 5px;
+}
+
+
+.button{
+    min-width: 50x;
+    min-height:20px;
+    background: #aaa;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 10px;
+    text-decoration: none;
+
+    color: black;
+}
+
+.button:hover{
+    background-color: black;
+    color: #aaa;
+}
+
+
+/* Footer */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.top-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.top-left-box{
+    /* width: 20%; */
+    margin: 0 5px;
+}
+
+.top-right-box{
+    /* width: 80%; */
+    margin: 0 5px;
+}
+
+.top-box p{
+    font-size: 15px;
+}
+
+.avatar{
+    width: 40px;
+}
+
+.bottom-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.bottom-left-box{
+    /* width: 20%; */
+    margin: 0 5px;
+}
+
+.bottom-left-box p{
+    font-size: 15px;
+}
+
+.bottom-right-box{
+    margin:0 5px;
+    /* width: 80%; */
+}
+
+footer img{
+    width: 20px;
+}
+
+p{
+    font-size: 40px;
+}
